@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 4204589182317646416, guid: 1361f0f15d952e349ad9c3b160a5a6cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4204589182317646416, guid: 1361f0f15d952e349ad9c3b160a5a6cd,
         type: 3}
@@ -220,7 +220,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.95686275, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -230,7 +230,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.75
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -283,8 +283,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 8386374021099120099}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &306274761563372852
 Transform:
@@ -382,8 +382,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 306274761563372852}
+  - {fileID: 1757612919}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9163050706630688601
 GameObject:
@@ -394,6 +395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8386374021099120099}
+  - component: {fileID: 9163050706630688602}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -401,3 +403,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9163050706630688602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163050706630688601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1f08d1ceb19d54ba6d00a4db866ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirectionalLight: {fileID: 1757612918}
+  DayNightPreset: {fileID: 11400000, guid: d870b1e4aa0d7f3438bb848641560280, type: 2}
+  LampPreset: {fileID: 11400000, guid: bf338d0029f05bd489266297219f16b7, type: 2}
+  TimeOfDay: 0
+  SunDirection: 170
+  TimeMultiplier: 25
+  ControlLights: 1
