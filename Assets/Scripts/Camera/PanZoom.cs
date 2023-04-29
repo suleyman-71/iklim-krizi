@@ -44,12 +44,6 @@ public class PanZoom : MonoBehaviour
         {
             Vector3 direction = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
             Camera.main.transform.position += direction * panSpeed;
-            //if (!EventSystem.current.IsPointerOverGameObject())
-            //{
-            //    Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //    touchPos.z = Camera.main.transform.position.z;
-            //    Camera.main.transform.position = touchPos;
-            //}
         }
 
         void Zoom(float increment)
